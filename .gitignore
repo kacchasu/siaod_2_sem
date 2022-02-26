@@ -20,7 +20,7 @@
 # Private Node Modules
 node_modules/
 creds.js
- 
+Debug/
 # Private Files
 *.json
 *.csv
@@ -28,6 +28,7 @@ creds.js
 *.tsv
 *.tsv.gz
 *.xlsx
+ 
  
  
 # Mac/OSX
