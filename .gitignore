@@ -20,7 +20,6 @@
 # Private Node Modules
 node_modules/
 creds.js
-Debug/
  
 # Private Files
 *.json
