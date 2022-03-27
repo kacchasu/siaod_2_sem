@@ -14,11 +14,11 @@ struct list
     Node* first;
     Node* last;
     list() : first(nullptr), last(nullptr) {};
-    bool is_empty() 
+    bool is_empty()
     {
         return first == nullptr;
     }
-    void push_back(int _val) 
+    void push_back(int _val)
     {
         Node* p = new Node(_val);
         if (is_empty()) {
@@ -40,13 +40,13 @@ struct list
         }
         cout << endl;
     }
-    Node* find(int _val) 
+    Node* find(int _val)
     {
         Node* p = first;
         while (p && p->val != _val) p = p->next;
         return (p && p->val == _val) ? p : nullptr;
     }
-    Node* operator[] (const int index) 
+    Node* operator[] (const int index)
     {
         if (is_empty()) return nullptr;
         Node* p = first;
