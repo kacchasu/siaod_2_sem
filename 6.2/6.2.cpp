@@ -51,18 +51,14 @@ struct list
         }
         return p;
     }
-    int find_min()
-    {
-        Node* p = first;
-        int min = 1000000;
-        while (p)
-        {
-            p->val < min ? min = p->val : 0;
-            p = p->next;
-        }
-        return min;
-    }
 };
+int find_min(Node* p, int min) {
+    p->val < min ? min = p->val : 0;
+    if (p->next)
+        return find_min(p->next, min);
+    else
+        return min;
+}
 int main()
 {
     list l;
@@ -76,6 +72,6 @@ int main()
         cin >> tmp;
         l.push_back(tmp);
     }
-    cout << "Minimal value of linked list is: " << l.find_min();
+    cout << "Minimal value of linked list is: " << find_min(l.first, 1000000);
     return 0;
 }
